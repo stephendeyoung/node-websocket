@@ -13,11 +13,11 @@ The model object holds all of the relevant data about the sports club and update
 
 Install the ws package:
 
-	`$ npm install ws`
+	$ npm install ws
 
 Run the app.js file:
 
-	`$ node app.js`
+	$ node app.js
 
 This will start the WebSocket server, on port 8081 by default (you can change that by editing the app.js file).
 
