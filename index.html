@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sports club stock prices</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sports club stock prices</h1>
+            <table id="stocks" class="stocks">
+                <thead>
+                    <tr>
+                        <th>Club</th>
+                        <th>Current Price</th>
+                        <th>Change</th>
+                        <th class="extra-width">Range</th>
+                        <th class="extra-width">Change and &#37; change since you connected</th>
+                        <th class="extra-width">Average change and &#37; change in the last 60 seconds</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    <script src="handlebars.js"></script>
+    <script id="club-template" type="text/x-handlebars-template">
+        <tr id="club{{id}}">
+            <td class="normal name">{{name}}</td>
+            <td class="level">
+                <span class="normal currency">{{currency}}</span>
+                <span class="normal price">{{level}}</span>
+            </td>
+            <td class="change">
+                <span class="icon"></span>
+            </td>
+            <td class="range">
+                <span class="item">Highest:
+                    <span class="normal highest">{{level}}</span>
+                </span>
+                <span>Lowest:
+                    <span class="normal lowest">{{level}}</span>
+                </span>
+            </td>
+            <td class="conn-change">
+                <span class="item">Change:
+                    <span class="normal change-num">-</span>
+                </span>
+                <span >&#37; change:
+                    <span class="normal change-perc">-</span>
+                </span>
+            </td>
+            <td class="minute-change">
+                <span class="item">Change:
+                    <span class="normal change-num">-</span>
+                </span>
+                <span>&#37; change:
+                    <span class="normal change-perc">-</span>
+                </span>
+            </td>
+        </tr>
+    </script>
+    <script src="show-data.js"></script>
+    </body>
+</html>
